@@ -3,7 +3,7 @@ package valdes.com.company;
 import java.awt.*;
 import java.awt.geom.*;
 
-public class Aquarium {
+public final class Aquarium {
     public Aquarium() {
     }
 

@@ -13,12 +13,13 @@ public class DrawingCanvas extends JComponent {
         this.width = width;
         this.height = height;
         aquarium = new Aquarium();
-        fish = new Fish(50, 100, 50, Color.YELLOW);
+        fish = new Fish(300, 400, 100, Color.YELLOW);
     }
 
     @Override
     protected void paintComponent(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         aquarium.drawAquarium(g2d);
+        fish.drawFish(g2d);
     }
 }
