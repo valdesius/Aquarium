@@ -7,39 +7,42 @@ public class Fish {
     private double x;
     private double y;
     private double size;
-    private Color color;
+    final private Color color = new Color(0xF5AF00);
 
-    public Fish(double x, double y, double size, Color color) {
+    public Fish(double x, double y, double size) {
         this.x = x;
         this.y = y;
         this.size = size;
-        this.color = color;
     }
 
     public void drawFish(Graphics2D g2d) {
         Ellipse2D.Double el1 = new Ellipse2D.Double();
-        g2d.setColor(new Color(0xF5AF00));
+        g2d.setColor(color);
         el1.setFrame(x, y, size, size * 0.5);
         g2d.fill(el1);
 
+        Path2D.Double p = new Path2D.Double();
+        g2d.setColor(new Color(0x076280));
+        p.moveTo(x + 110, y + 50);
+        p.lineTo(x + 110, y);
+        p.lineTo(x + 80, y + 25);
+        p.lineTo(x + 80, y + 25);
+        p.lineTo(x + 110, y + 50);
+        g2d.fill(p);
 
-//        QuadCurve2D.Double curve1 = new QuadCurve2D.Double(x * 1.3259, y * 1.25, x*2.33, y*1.5, x * 1.3259, y * 2);
-//        g2d.setColor(new Color(0x076280));
-//        g2d.draw(curve1);
 
-//        Ellipse2D.Double el2 = new Ellipse2D.Double();
-//        g2d.setColor(new Color(0xFFFFFF));
-//        el2.setFrame(35, 55, 12, 12);
-//        g2d.fill(el2);
-//
-//        Line2D.Double line2D = new Line2D.Double();
-//        g2d.setColor(new Color(0x000000));
-//        line2D.x1 = 40;
-//        line2D.x2 = 40;
-//        line2D.y1 = 60;
-//        line2D.y2 = 63;
-//        g2d.draw(line2D);
+        Ellipse2D.Double el2 = new Ellipse2D.Double();
+        g2d.setColor(new Color(0xFFFFFF));
+        el2.setFrame(x + 15, y + 10, 15, 15);
+        g2d.fill(el2);
 
+        Ellipse2D.Double el3 = new Ellipse2D.Double();
+        g2d.setColor(Color.BLACK);
+        el3.setFrame(x + 20, y + 15, 5, 5);
+        g2d.fill(el3);
+
+        QuadCurve2D.Double curve1 = new QuadCurve2D.Double(x + 1, y + 32, x + 17, y + 45, x + 30, y + 35);
+        g2d.draw(curve1);
     }
 
 }
