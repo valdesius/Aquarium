@@ -8,6 +8,9 @@ public final class Aquarium {
     }
 
     public void drawAquarium(Graphics2D g2d) {
+
+
+
         Path2D.Double p1 = new Path2D.Double();
         g2d.setColor(new Color(0x0492c2));
         p1.moveTo(200, 200);
@@ -51,40 +54,28 @@ public final class Aquarium {
         border.lineTo(750, 450);
         border.lineTo(750, 150);
         border.moveTo(750, 450);
-        border.lineTo(250, 450);//up
+        border.lineTo(250, 450);
         border.lineTo(200, 500);
         border.lineTo(700, 500);
         border.moveTo(250, 450);
         border.lineTo(250, 150);
         g2d.draw(border);
-        //wave line
         g2d.setColor(Color.BLACK);
-        QuadCurve2D.Double curve1 = new QuadCurve2D.Double(200, 250, 220, 220, 250, 250);
-        QuadCurve2D.Double curve2 = new QuadCurve2D.Double(250, 250, 270, 220, 300, 250);
-        QuadCurve2D.Double curve3 = new QuadCurve2D.Double(300, 250, 320, 220, 350, 250);
-        QuadCurve2D.Double curve4 = new QuadCurve2D.Double(350, 250, 370, 220, 400, 250);
-        QuadCurve2D.Double curve5 = new QuadCurve2D.Double(400, 250, 420, 220, 450, 250);
-        QuadCurve2D.Double curve6 = new QuadCurve2D.Double(450, 250, 470, 220, 500, 250);
-        QuadCurve2D.Double curve7 = new QuadCurve2D.Double(500, 250, 520, 220, 550, 250);
-        QuadCurve2D.Double curve8 = new QuadCurve2D.Double(550, 250, 570, 220, 600, 250);
-        QuadCurve2D.Double curve9 = new QuadCurve2D.Double(600, 250, 620, 220, 650, 250);
-        QuadCurve2D.Double curve10 = new QuadCurve2D.Double(650, 250, 670, 220, 700, 250);
-        QuadCurve2D.Double curve11 = new QuadCurve2D.Double(700, 250, 710, 200, 725, 230);
-        QuadCurve2D.Double curve12 = new QuadCurve2D.Double(725, 230, 725, 200, 740, 210);
-        QuadCurve2D.Double curve13 = new QuadCurve2D.Double(740, 210, 740, 185, 750, 200);
-        g2d.draw(curve1);
-        g2d.draw(curve2);
-        g2d.draw(curve3);
-        g2d.draw(curve4);
-        g2d.draw(curve5);
-        g2d.draw(curve6);
-        g2d.draw(curve7);
-        g2d.draw(curve8);
-        g2d.draw(curve9);
-        g2d.draw(curve10);
-        g2d.draw(curve11);
-        g2d.draw(curve12);
-        g2d.draw(curve13);
+
+        Path2D.Double border2 = new Path2D.Double();
+        border2.moveTo(200, 200);
+        border2.lineTo(200, 180);
+        border2.lineTo(700, 180);
+        border2.lineTo(700, 200);
+        border2.moveTo(200, 180);
+        border2.lineTo(250, 130);
+        border2.lineTo(250, 150);
+        border2.moveTo(250, 130);
+        border2.lineTo(750, 130);
+        border2.lineTo(750, 150);
+        border2.moveTo(750, 130);
+        border2.lineTo(700, 180);
+
 
 
     }

@@ -7,7 +7,7 @@ import java.awt.geom.Path2D;
 public class Plant {
     private double x;
     final private double y = 475;
-    private double size;
+    private final double size;
     final private Color color = Color.green;
 
     public Plant(double x, double size) {

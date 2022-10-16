@@ -45,4 +45,32 @@ public class Fish {
         g2d.draw(curve1);
     }
 
+    public void drawFishReverse(Graphics2D g2d) {
+        Ellipse2D.Double el1 = new Ellipse2D.Double();
+        g2d.setColor(color);
+        el1.setFrame(x, y, size, size * 0.5);
+        g2d.fill(el1);
+
+        Path2D.Double p = new Path2D.Double();
+        g2d.setColor(new Color(0x076280));
+        p.moveTo(x - 10, y + 50);
+        p.lineTo(x - 10, y);
+        p.lineTo(x + 20, y + 25);
+        p.lineTo(x - 10, y + 50);
+        g2d.fill(p);
+
+        Ellipse2D.Double el2 = new Ellipse2D.Double();
+        g2d.setColor(new Color(0xFFFFFF));
+        el2.setFrame(x + 69, y + 10, 15, 15);
+        g2d.fill(el2);
+
+        Ellipse2D.Double el3 = new Ellipse2D.Double();
+        g2d.setColor(Color.BLACK);
+        el3.setFrame(x + 75, y + 15, 5, 5);
+        g2d.fill(el3);
+
+        QuadCurve2D.Double curve1 = new QuadCurve2D.Double(x + 70, y + 32, x + 85, y + 45, x + 95, y + 35);
+        g2d.draw(curve1);
+    }
+
 }
